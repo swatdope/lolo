@@ -17,15 +17,3 @@ mongoose.connect(CONNECTION_URL, {useNewUrlParser: true, useUnifiedTopology: tru
 .then(() => app.listen(PORT, console.log(`server running at port:${PORT}`)))
 .catch((error)=> console.log(`${error} did not connect`))
 
-import React from 'react'
-import PropTypes from 'prop-types'
-
-export default (WrappedComponent) => {
-    const hocComponent = ({ ...props }) => <WrappedComponent {...props} />
-
-    hocComponent.propTypes = {
-    }
-
-    return hocComponent
-}
-// change made
